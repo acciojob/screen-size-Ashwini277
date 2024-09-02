@@ -6,26 +6,28 @@
     <title>Screen Size</title>
     <style>
         #sizeInfo {
-            margin: 20px;
+            text-align: center;
+            margin-top: 20%;
         }
     </style>
 </head>
 <body>
     <div id="sizeInfo">
-        <h1></h1>
+        <h1>Width: 0 and Height: 0</h1>
     </div>
 
     <script>
         function updateSize() {
             const width = window.innerWidth;
             const height = window.innerHeight;
-            document.querySelector('#sizeInfo h1').textContent = `Width: ${width} and Height: ${height}`;
+            const sizeInfo = document.getElementById('sizeInfo');
+            sizeInfo.innerHTML = `<h1>Width: ${width} and Height: ${height}</h1>`;
         }
 
-        // Update size on initial load
+        // Initial size update
         updateSize();
 
-        // Add event listener for window resize
+        // Update size on window resize
         window.addEventListener('resize', updateSize);
     </script>
 </body>
