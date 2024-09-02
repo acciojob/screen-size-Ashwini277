@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen Size</title>
-    <style>
-        #sizeInfo {
-            text-align: center;
-            margin-top: 20%;
-        }
-    </style>
 </head>
 <body>
     <div id="sizeInfo">
@@ -20,8 +14,7 @@
         function updateSize() {
             const width = window.innerWidth;
             const height = window.innerHeight;
-            const sizeInfo = document.getElementById('sizeInfo');
-            sizeInfo.innerHTML = `<h1>Width: ${width} and Height: ${height}</h1>`;
+            document.getElementById('sizeInfo').innerHTML = `<h1>Width: ${width} and Height: ${height}</h1>`;
         }
 
         // Initial size update
